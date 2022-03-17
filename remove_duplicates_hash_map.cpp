@@ -2,29 +2,31 @@
 #include<vector>
 #include<unordered_map>
 using namespace std;
-vector<int> removeDuplicates(vector<int> arr) {
+
+vector<int> removeDuplicates(vector<int> arr){
   unordered_map<int,bool> visited;
-  for(int i = 0; i < arr.size(); i++)
+  for(int i = 0; i < arr.size(); i++){
     visited[arr[i]] = true;
+  }
   vector<int> noDuplicatesArr;
-  for(auto const& pair : visited)
-    noDuplicatesArr.push_back(pair.first);
+  for(auto const& p : visited){
+    noDuplicatesArr.push_back(p.first);
+  }
   return noDuplicatesArr;
 }
+
 int main() {
-vector<int> vec1;
-int element,size, dupNum ;
-cout<<"Enter the size of your vector"<<endl ;
-cin>>size;
-for(int i=0;i<size;i++)
-{
-
-cin>>element;
-vec1.push_back(element);
+    int n,num;
+    cin >> n;
+    vector<int> arr, ans;
+    int i;
+    for(i = 0; i < n; i++)
+    {
+        cin >> num;
+        arr.push_back(num);
+    }
+    ans = removeDuplicates(arr);
+    for(int i = 0; i < ans.size(); i++)
+        cout << ans[i] << " ";
+    return 0;
 }
-dupNum = removeDuplicates(vec1);
-cout<< dupNum <<endl;
-
-}
-
-  
