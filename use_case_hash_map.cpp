@@ -9,7 +9,7 @@ int main() {
 	pair<string, int> p("abc",5);
 	ourmap.insert(p);
 	ourmap["def"] = 2;
-	ourmap["ghj"] = 4; 
+	ourmap["ghj"] = 4;
 
 	//find or access
 	cout <<ourmap["abc"]<<endl;
